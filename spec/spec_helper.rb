@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'spork'
 
+def integration_sign_in(user)
+  visit signin_path
+  fill_in :email,     :with => user.email
+  fill_in :password,  :with => user.password
+  click_button
+end
+
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
