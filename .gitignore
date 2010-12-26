@@ -6,6 +6,7 @@ tmp/**/*
 tmp/*
 doc/api
 doc/app
+doc/*.svg
 *.swp
 *~
 .DS_Store
